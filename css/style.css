@@ -1,0 +1,320 @@
+@import url("fonts/stylesheet.css");
+header, header ul li a {
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+
+section .fade {
+  -webkit-transition: all 1000ms ease 500ms;
+  transition: all 1000ms ease 500ms;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Suzano Sans";
+}
+
+.container {
+  max-width: 1680px;
+  padding: 0 5%;
+}
+
+section {
+  position: relative;
+  min-height: 100vh;
+}
+
+section:not(.state-two) .effect-right {
+  -webkit-transform: translateX(100vw);
+          transform: translateX(100vw);
+  opacity: 0;
+}
+
+section:not(.state-two) .effect-left {
+  -webkit-transform: translateX(-100vw);
+          transform: translateX(-100vw);
+  opacity: 0;
+}
+
+section:not(.state-two) .fade {
+  opacity: 0;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: 15px 0;
+}
+
+header.no-top {
+  background-color: #00cdf5;
+}
+
+header:not(.no-top) {
+  padding: 5rem 0 15px;
+}
+
+header .container {
+  overflow: hidden;
+}
+
+header ul {
+  -webkit-transform: translateX(-100vw);
+          transform: translateX(-100vw);
+}
+
+header ul.go {
+  -webkit-transition: all 1000ms ease;
+  transition: all 1000ms ease;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+header ul li a {
+  display: table;
+  border-radius: 4px;
+  padding: 10px;
+  font-weight: 500;
+}
+
+header ul li a:hover, header ul li a.act {
+  background-color: #fff;
+}
+
+header ul li + li {
+  margin-left: 5rem;
+}
+
+.home {
+  background-color: #00cdf5;
+}
+
+.home .container {
+  position: relative;
+  padding-bottom: 10rem;
+}
+
+.home .text {
+  color: #fff;
+  font-weight: 300;
+  padding-left: 10rem;
+  position: relative;
+  z-index: 2;
+}
+
+.home .text p {
+  font-size: 2.7rem;
+}
+
+.home .text img {
+  width: 20rem;
+}
+
+.home .text .compre {
+  width: 15rem;
+  margin-left: -4rem;
+}
+
+.home .text h1 span {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.home .copo {
+  position: absolute;
+  bottom: 0;
+  right: -10px;
+  max-height: 75vh;
+}
+
+.home .img-text {
+  max-height: 65vh;
+  -webkit-transform: scale(0) translateY(-100vh);
+          transform: scale(0) translateY(-100vh);
+}
+
+.home .img-text.go {
+  -webkit-transform: scale(1) translateY(0);
+          transform: scale(1) translateY(0);
+  -webkit-transition: all 1000ms ease;
+  transition: all 1000ms ease;
+}
+
+.home .selo {
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  width: 20rem;
+  -webkit-transform: translate(-50vw, 50%);
+          transform: translate(-50vw, 50%);
+}
+
+.home .selo.go {
+  -webkit-transform: translate(0, 50%);
+          transform: translate(0, 50%);
+  -webkit-transition: all 1400ms ease;
+  transition: all 1400ms ease;
+}
+
+.negocio .col {
+  max-width: 35%;
+  position: relative;
+  z-index: 3;
+  padding-bottom: 10rem;
+}
+
+.negocio .col h2 {
+  color: #00cdf5;
+  font-weight: 300;
+  font-size: 5rem;
+  margin-bottom: 0.5em;
+}
+
+.negocio .col p {
+  font-weight: 300;
+  color: #5b5b5f;
+  font-size: 3rem;
+}
+
+.negocio .image {
+  position: absolute;
+  bottom: -25px;
+  z-index: 2;
+  right: -10px;
+  max-height: 80vh;
+  -webkit-transition: all 1000ms ease;
+  transition: all 1000ms ease;
+}
+
+.vantagens {
+  background-color: #f4f0e5;
+}
+
+.vantagens .image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  max-width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all 1000ms ease;
+  transition: all 1000ms ease;
+}
+
+.vantagens .col {
+  width: 50%;
+  color: #00cdf5;
+  padding-left: 5rem;
+}
+
+.vantagens .col h2 {
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+.vantagens .col p {
+  font-weight: 300;
+  font-size: 3rem;
+  margin-top: 1em;
+}
+
+.vantagens .compre {
+  width: 15rem;
+  margin-top: 2.5rem;
+}
+
+.certificados {
+  overflow: hidden;
+}
+
+.certificados .right {
+  position: relative;
+  width: 50%;
+  height: 100vh;
+}
+
+.certificados .right .spin {
+  width: 100%;
+  -webkit-animation: spin infinite 60s linear;
+          animation: spin infinite 60s linear;
+  margin: auto;
+}
+
+.certificados .right div {
+  color: #00cdf5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.certificados .right div h3 {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.certificados .right div p {
+  color: #5b5b5f;
+  margin-top: 0.7em;
+  font-weight: 500;
+}
+
+.certificados .left {
+  position: relative;
+  z-index: 2;
+  width: 50%;
+  max-width: 500px;
+}
+
+.certificados .left h2 {
+  color: #00cdf5;
+  font-weight: 500;
+  font-size: 3rem;
+}
+
+footer {
+  background-color: #00cdf5;
+  color: #fff;
+  padding: 2rem 0;
+}
+
+footer img {
+  display: block;
+  margin-bottom: 1.5rem;
+  width: 21.5rem;
+}
+
+footer p {
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+footer span {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+footer .contato {
+  margin-top: 2rem;
+}
+
+footer .contato .number {
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+footer .contato div + div {
+  margin-left: 4rem;
+}
+
+@media screen and (max-width: 1600px) {
+  html {
+    font-size: 50%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
