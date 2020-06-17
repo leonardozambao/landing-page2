@@ -15,7 +15,6 @@ $text: #5b5b5f;
     transition: all $time ease;
 }
 body {
-    overflow-x: hidden;
     font-family: "Suzano Sans";
 }
 .container {
@@ -59,11 +58,6 @@ header {
         overflow: hidden;
     }
     ul {
-        transform: translateX(-100vw);
-        &.go {
-            @include transition(1000ms);
-            transform: translateX(0);
-        }
         li {
             a {
                 display: table;
@@ -250,8 +244,9 @@ footer {
         font-weight: bold;
         font-size: 1.8rem;
     }
-    span{
-        font-size: 2rem;font-weight: bold;
+    span {
+        font-size: 2rem;
+        font-weight: bold;
     }
 
     .contato {
@@ -269,5 +264,143 @@ footer {
 @media screen and (max-width: 1600px) {
     html {
         font-size: 50%;
+    }
+}
+@media screen and (min-width: 861px) {
+    header {
+        ul {
+            transform: translateX(-100vw);
+            &.go {
+                @include transition(1000ms);
+                transform: translateX(0);
+            }
+        }
+    }
+}
+@media screen and (max-width: 860px) {
+    section {
+        min-height: unset;
+    }
+    header {
+        &:not(.top){
+            padding: 10px 0;
+        }
+        .logo,
+        .menu-button{
+            z-index: 11;
+        }
+        background-color: $azul;
+        #nav{
+            display: none;
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background-color: $azul;
+            z-index: 10;
+            top: 0;
+            left: 0;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            li + li{
+                margin-left: 0;
+            }
+            a{
+                font-size: 2.7rem;
+            }
+        }
+        .logo{
+            img{
+                width: 150px;
+            }
+        }
+        &.menu-opened{
+            #nav{
+                display: flex;
+            }
+        }
+    }
+    .home {
+        padding-top: 80px;
+        .logo{
+            margin-bottom: 10px;
+        }
+        .copo {
+            position: static;
+            margin: 0 0 0 auto;
+        }
+        .container > .flex{
+            align-items: center;
+        }
+        .img-text{
+            max-width: 90%;
+            max-height: unset;
+            margin: 0 auto 20px;
+            display: block;
+        }
+        .text{
+            flex-direction: row;
+            padding-left: 0;
+            .compre{
+                margin-left: 20px;
+                width: 10rem;
+            }
+        }
+    }
+    .negocio{
+        max-width: 100%;
+        .image{
+            position: relative;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            max-height: unset;
+        }
+        .col{
+            max-width: 100%;
+            padding: 20px 0 0;
+        }
+    }
+    .vantagens{
+        flex-direction: column-reverse;
+        .image{
+            position: static;
+            max-height: unset;
+            width: 100%;
+        }
+        .col{
+            width: 100%;
+            padding: 20px 0;
+        }
+        .compre{
+            display: none;
+        }
+    }
+    .certificados{
+        .right{
+            height: auto;
+            width: 100%;
+            flex-direction: column-reverse;
+            div{
+                position: static;
+                transform: translate(0,0);
+                text-align: left;
+                padding-bottom: 20px;
+            }
+        }
+        .left{
+            width: 100%;
+            padding: 20px 0;
+            h2{
+                font-weight: bold;
+            }
+        }
+    }
+    footer{
+        .contato{
+            div + div{
+                margin-left: 0;
+            }
+        }
     }
 }

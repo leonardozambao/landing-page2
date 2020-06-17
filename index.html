@@ -22,7 +22,7 @@
 <body>
     <header class="full">
         <div class="flex-between flex-align-center container">
-            <ul class="flex load-effect" id="nav">
+            <ul class="flex load-effect no-wrap" id="nav">
                 <li>
                     <a href="javascript:void(0);" referente="home" onclick="scrollToElement('#home', 500, '', 0)"
                         class="act">Bluecup®</a>
@@ -44,15 +44,20 @@
             <a href="https://www.suzano.com.br" class="logo">
                 <img src="images/suzano.png" alt="Suzano">
             </a>
+            <a href="javascript:void(0);" class="menu-button only-mobile">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
         </div>
     </header>
     <section class="home flex-align-end" id="home">
         <div class="container">
-            <div class="flex">
+            <div class="flex mob-column">
                 <div class="col">
                     <img src="images/text.png" alt="um produto cheio de vida" class="img-text load-effect">
                 </div>
-                <div class="col text flex-column flex-between">
+                <div class="col text flex-column flex-between no-wrap">
                     <div>
                         <p>
                             Conforto e<br>

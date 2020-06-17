@@ -202,7 +202,8 @@ function scrollToElement(e, speed, container, margin) {
 				fx.end = newOffset;
 		}
 	}
-	);
+    );
+    $('.menu-opened').removeClass('menu-opened');
 	return false;
 }
 
